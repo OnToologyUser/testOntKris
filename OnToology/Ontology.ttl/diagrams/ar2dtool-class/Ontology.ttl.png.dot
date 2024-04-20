@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "ontology:MaxRating" "ontology:FoodAndBeverages" "ontology:Flight" "ontology:Seat" "ontology:GroundService" "ontology:CabinStaffService" "ontology:Review" "ontology:InflightEntertainment" "ontology:Passenger" "ontology:Destination" "ontology:Service" ; /*classes style*/
+	"ontology:flightCount" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasFlightCount" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:destinationCountry" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasSeatRating" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:CabinStaffService" -> "ontology:GroundService" [ label = "owl:disjointWith" ];
+	"ontology:FoodAndBeverages" -> "ontology:InflightEntertainment" [ label = "owl:disjointWith" ];
+	"ontology:averageRating" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:ticketPrice" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "xsd:integer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "ontology:flightCount" [ label = "owl:onProperty" ];
+	"ontology:hasDestination" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasRating" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:Destination" -> "owl:Thing" [ label = "ontology:destinationCountry" ];
+	"ontology:Review" -> "ontology:Seat" [ label = "ontology:hasSeatRating" ];
+	"ontology:Review" -> "xsd:decimal" [ label = "ontology:ticketPrice" ];
+	"ontology:Review" -> "ontology:MaxRating" [ label = "ontology:hasRating" ];
+	"ontology:Passenger" -> "owl:Thing" [ label = "ontology:hasFlightCount" ];
+	"ontology:Service" -> "xsd:decimal" [ label = "ontology:averageRating" ];
+	"ontology:Passenger" -> "ontology:Destination" [ label = "ontology:hasDestination" ];
+	"ontology:Flight" -> "xsd:integer" [ label = "ontology:flightCount" ];
+
+}

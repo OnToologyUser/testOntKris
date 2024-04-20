@@ -1,0 +1,280 @@
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#destinationCountry
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#destinationCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#destinationCountry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#destinationCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Aircraft
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the route or aircraft where the plane will fly" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the passenger who rated the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author> <http://www.w3.org/2000/01/rdf-schema#label> "Author" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business> <http://www.w3.org/2000/01/rdf-schema#comment> "Business Type passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the cabin staff service" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService> <http://www.w3.org/2000/01/rdf-schema#label> "Cabin Staff Service" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "Body of the message that the reviewer wrote" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment> <http://www.w3.org/2000/01/rdf-schema#label> "Comment" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the review" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Comment Title" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Country
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the date of flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown> <http://www.w3.org/2000/01/rdf-schema#label> "Date Flown" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Country> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the destination of the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> <http://www.w3.org/2000/01/rdf-schema#label> "Destination" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "Information of the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight> <http://www.w3.org/2000/01/rdf-schema#label> "Flight" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the quality of the food and beverages during the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages> <http://www.w3.org/2000/01/rdf-schema#label> "Food And Beverages" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the quality of the service when the passenger arrives to the destination" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService> <http://www.w3.org/2000/01/rdf-schema#label> "Ground Service" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the quality and availability of the entertainment during the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#label> "Inflight Entertainment" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum rating from the passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating> <http://www.w3.org/2000/01/rdf-schema#label> "Max Rating" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Country> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the origin from where the passenger take the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin> <http://www.w3.org/2000/01/rdf-schema#label> "Origin" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the country of the passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger Country" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the type of passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger Type" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> <http://www.w3.org/2000/01/rdf-schema#comment> "General information about the review" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> <http://www.w3.org/2000/01/rdf-schema#comment> "information about the seat taken by the passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> <http://www.w3.org/2000/01/rdf-schema#label> "Seat" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the quality and confort of the seat" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort> <http://www.w3.org/2000/01/rdf-schema#label> "Seat Confort" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating of the selected seat" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating> <http://www.w3.org/2000/01/rdf-schema#label> "Seat Rating" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the type of seat taken by the passenger" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#label> "Seat Type" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "General information about the given service during the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger type: Tourist" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist> <http://www.w3.org/2000/01/rdf-schema#label> "Tourist" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "information about the connectivity and the WiFi quality during the flight" .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#label> "Wifi Connectivity" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger320
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger320> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger320> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger320> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount> "15"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Rome
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Rome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Rome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Rome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Rome> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Rome" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat320
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat320> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat320> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Spain
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Spain> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Spain" .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#19/04/2024
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#19/04/2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#19/04/2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#4g
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#4g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#4g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity> .
+# 
+# http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#5g
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#5g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#5g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity> .
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#5g> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/5G" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

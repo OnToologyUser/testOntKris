@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "ontology:MaxRating" "ontology:CommentTitle" "ontology:FoodAndBeverages" "ontology:Tourist" "ontology:SeatConfort" "ontology:Seat" "ontology:GroundService" "ontology:CabinStaffService" "ontology:Comment" "ontology:SeatType" "ontology:Business" "ontology:Review" "ontology:PassengerCountry" "ontology:Author" "ontology:Origin" "ontology:Country" "ontology:SeatRating" "ontology:PassengerType" "ontology:Passenger" "ontology:Destination" "ontology:Service" ; /*classes style*/
+	"ontology:SeatConfort" -> "ontology:Seat" [ label = "rdfs:subClassOf" ];
+	"ontology:Origin" -> "ontology:Country" [ label = "rdfs:subClassOf" ];
+	"ontology:Tourist" -> "ontology:PassengerType" [ label = "rdfs:subClassOf" ];
+	"ontology:Comment" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
+	"ontology:Author" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
+	"ontology:MaxRating" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
+	"ontology:Business" -> "ontology:PassengerType" [ label = "rdfs:subClassOf" ];
+	"ontology:PassengerCountry" -> "ontology:Passenger" [ label = "rdfs:subClassOf" ];
+	"ontology:CabinStaffService" -> "ontology:Service" [ label = "rdfs:subClassOf" ];
+	"ontology:Destination" -> "ontology:Country" [ label = "rdfs:subClassOf" ];
+	"ontology:PassengerType" -> "ontology:Passenger" [ label = "rdfs:subClassOf" ];
+	"ontology:FoodAndBeverages" -> "ontology:Service" [ label = "rdfs:subClassOf" ];
+	"ontology:SeatType" -> "ontology:Seat" [ label = "rdfs:subClassOf" ];
+	"ontology:GroundService" -> "ontology:Service" [ label = "rdfs:subClassOf" ];
+	"ontology:SeatRating" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
+	"ontology:CommentTitle" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
+
+}

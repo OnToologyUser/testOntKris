@@ -1,0 +1,130 @@
+{
+  "@context" : {
+    "destinationCountry" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#destinationCountry",
+      "@type" : "@id"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating",
+      "@type" : "@id"
+    },
+    "flightCount" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review"
+    },
+    "MaxRating" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Country"
+    },
+    "Comment" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment"
+    },
+    "SeatConfort" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "PassengerCountry" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry"
+    },
+    "SeatRating" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating"
+    },
+    "hasDestination" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin"
+    },
+    "DateFlown" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown"
+    },
+    "hasSeatRating" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating",
+      "@type" : "@id"
+    },
+    "InflightEntertainment" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment"
+    },
+    "Business" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business"
+    },
+    "CabinStaffService" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService"
+    },
+    "averageRating" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasFlightCount" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger"
+    },
+    "Seat" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat"
+    },
+    "WifiConnectivity" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Aircraft"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight"
+    },
+    "Author" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author"
+    },
+    "GroundService" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service"
+    },
+    "Tourist" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist"
+    },
+    "CommentTitle" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType"
+    },
+    "FoodAndBeverages" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages"
+    },
+    "ticketPrice" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "PassengerType" : {
+      "@id" : "http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType"
+    }
+  }
+}
