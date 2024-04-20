@@ -1,0 +1,309 @@
+@prefix : <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix ontology: <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#> .
+@base <http://www.semanticweb.org/krisi/ontologies/2024/3/ontology/> .
+
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#destinationCountry
+ontology:destinationCountry rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain ontology:Destination .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasDestination
+ontology:hasDestination rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain ontology:Passenger ;
+                        rdfs:range ontology:Destination .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasFlightCount
+ontology:hasFlightCount rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain ontology:Passenger ;
+                        rdfs:range [ rdf:type owl:Restriction ;
+                                     owl:onProperty ontology:flightCount ;
+                                     owl:someValuesFrom xsd:integer
+                                   ] .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasRating
+ontology:hasRating rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain ontology:Review ;
+                   rdfs:range ontology:MaxRating .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#hasSeatRating
+ontology:hasSeatRating rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain ontology:Review ;
+                       rdfs:range ontology:Seat .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#averageRating
+ontology:averageRating rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain ontology:Service ;
+                       rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#flightCount
+ontology:flightCount rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain ontology:Flight ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#ticketPrice
+ontology:ticketPrice rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain ontology:Review ;
+                     rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Aircraft
+ontology:Aircraft rdf:type owl:Class ;
+                  rdfs:comment "Information about the route or aircraft where the plane will fly" ;
+                  rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Author
+ontology:Author rdf:type owl:Class ;
+                rdfs:subClassOf ontology:Review ;
+                rdfs:comment "Name of the passenger who rated the flight" ;
+                rdfs:label "Author" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Business
+ontology:Business rdf:type owl:Class ;
+                  rdfs:subClassOf ontology:PassengerType ;
+                  rdfs:comment "Business Type passenger" ;
+                  rdfs:label "Business" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CabinStaffService
+ontology:CabinStaffService rdf:type owl:Class ;
+                           rdfs:subClassOf ontology:Service ;
+                           owl:disjointWith ontology:GroundService ;
+                           rdfs:comment "Information about the cabin staff service" ;
+                           rdfs:label "Cabin Staff Service" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Comment
+ontology:Comment rdf:type owl:Class ;
+                 rdfs:subClassOf ontology:Review ;
+                 rdfs:comment "Body of the message that the reviewer wrote" ;
+                 rdfs:label "Comment" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#CommentTitle
+ontology:CommentTitle rdf:type owl:Class ;
+                      rdfs:subClassOf ontology:Review ;
+                      rdfs:comment "Title of the review" ;
+                      rdfs:label "Comment Title" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Country
+ontology:Country rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#DateFlown
+ontology:DateFlown rdf:type owl:Class ;
+                   rdfs:comment "Information about the date of flight" ;
+                   rdfs:label "Date Flown" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Destination
+ontology:Destination rdf:type owl:Class ;
+                     rdfs:subClassOf ontology:Country ;
+                     rdfs:comment "Information about the destination of the flight" ;
+                     rdfs:label "Destination" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Flight
+ontology:Flight rdf:type owl:Class ;
+                rdfs:comment "Information of the flight" ;
+                rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#FoodAndBeverages
+ontology:FoodAndBeverages rdf:type owl:Class ;
+                          rdfs:subClassOf ontology:Service ;
+                          owl:disjointWith ontology:InflightEntertainment ;
+                          rdfs:comment "Information about the quality of the food and beverages during the flight" ;
+                          rdfs:label "Food And Beverages" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#GroundService
+ontology:GroundService rdf:type owl:Class ;
+                       rdfs:subClassOf ontology:Service ;
+                       rdfs:comment "Information about the quality of the service when the passenger arrives to the destination" ;
+                       rdfs:label "Ground Service" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#InflightEntertainment
+ontology:InflightEntertainment rdf:type owl:Class ;
+                               rdfs:comment "Information about the quality and availability of the entertainment during the flight" ;
+                               rdfs:label "Inflight Entertainment" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#MaxRating
+ontology:MaxRating rdf:type owl:Class ;
+                   rdfs:subClassOf ontology:Review ;
+                   rdfs:comment "Maximum rating from the passenger" ;
+                   rdfs:label "Max Rating" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Origin
+ontology:Origin rdf:type owl:Class ;
+                rdfs:subClassOf ontology:Country ;
+                rdfs:comment "Information about the origin from where the passenger take the flight" ;
+                rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger
+ontology:Passenger rdf:type owl:Class ;
+                   rdfs:comment "Information about the passenger" ;
+                   rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerCountry
+ontology:PassengerCountry rdf:type owl:Class ;
+                          rdfs:subClassOf ontology:Passenger ;
+                          rdfs:comment "Information about the country of the passenger" ;
+                          rdfs:label "Passenger Country" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#PassengerType
+ontology:PassengerType rdf:type owl:Class ;
+                       rdfs:subClassOf ontology:Passenger ;
+                       rdfs:comment "Information about the type of passenger" ;
+                       rdfs:label "Passenger Type" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Review
+ontology:Review rdf:type owl:Class ;
+                rdfs:comment "General information about the review" ;
+                rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat
+ontology:Seat rdf:type owl:Class ;
+              rdfs:comment "information about the seat taken by the passenger" ;
+              rdfs:label "Seat" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatConfort
+ontology:SeatConfort rdf:type owl:Class ;
+                     rdfs:subClassOf ontology:Seat ;
+                     rdfs:comment "Information about the quality and confort of the seat" ;
+                     rdfs:label "Seat Confort" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatRating
+ontology:SeatRating rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:Review ;
+                    rdfs:comment "Rating of the selected seat" ;
+                    rdfs:label "Seat Rating" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#SeatType
+ontology:SeatType rdf:type owl:Class ;
+                  rdfs:subClassOf ontology:Seat ;
+                  rdfs:comment "Information about the type of seat taken by the passenger" ;
+                  rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Service
+ontology:Service rdf:type owl:Class ;
+                 rdfs:comment "General information about the given service during the flight" ;
+                 rdfs:label "Service" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Tourist
+ontology:Tourist rdf:type owl:Class ;
+                 rdfs:subClassOf ontology:PassengerType ;
+                 rdfs:comment "Passenger type: Tourist" ;
+                 rdfs:label "Tourist" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#WifiConnectivity
+ontology:WifiConnectivity rdf:type owl:Class ;
+                          rdfs:comment "information about the connectivity and the WiFi quality during the flight" ;
+                          rdfs:label "Wifi Connectivity" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Passenger320
+ontology:Passenger320 rdf:type owl:NamedIndividual ,
+                               ontology:Passenger ;
+                      ontology:flightCount 15 .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Rome
+ontology:Rome rdf:type owl:NamedIndividual ,
+                       ontology:Destination ,
+                       ontology:Origin ;
+              rdfs:sameAs "https://dbpedia.org/page/Rome" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Seat320
+ontology:Seat320 rdf:type owl:NamedIndividual ,
+                          ontology:Seat .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#Spain
+ontology:Spain rdf:type owl:NamedIndividual ,
+                        ontology:Destination ,
+                        ontology:Origin ;
+               rdfs:sameAs "https://dbpedia.org/page/Spain" .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#19/04/2024
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#19/04/2024> rdf:type owl:NamedIndividual ,
+                                                                                  ontology:DateFlown .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#4g
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#4g> rdf:type owl:NamedIndividual ,
+                                                                          ontology:WifiConnectivity .
+
+
+###  http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#5g
+<http://www.semanticweb.org/krisi/ontologies/2024/3/ontology#5g> rdf:type owl:NamedIndividual ,
+                                                                          ontology:WifiConnectivity ;
+                                                                 rdfs:sameAs "https://dbpedia.org/page/5G" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
